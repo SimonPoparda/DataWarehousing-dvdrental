@@ -8,33 +8,19 @@ The project leverages PostgreSQL to transform the relational data model into a S
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="# Data Source">Data Source</a>
+      <a href="#data-source">Data Source</a>
+      <a href="#execution">Execution</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#creating-tables">Creating Tables</a></li>
       </ul>
       <ul>
-        <li><a href="#data-source">Data Source</a></li>
+        <li><a href="#inserting-the-data">Inserting the Data</a></li>
       </ul>
       <ul>
-        <li><a href="#scenario">Scenario</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="# Execution">Execution</a>
-      <ul>
-        <li><a href="#Creating Tables">Creating Tables</a></li>
-      </ul>
-      <ul>
-        <li><a href="#Inserting the Data">Inserting the Data</a></li>
-      </ul>
-      <ul>
-        <li><a href="#Analysis and time comparison">Analysis and time comparison</a></li>
-      </ul>
-      <ul>
-        <li><a href="#synapse-analytics">Synapse Analytics</a></li>
+        <li><a href="#analysis-and-time-comparison">Analysis and time comparison</a></li>
       </ul>
     </li>
-      <a href="#Summary">Summary</a>
+      <a href="#summary">Summary</a>
     </li>
   </ol>
 
@@ -45,14 +31,22 @@ The project leverages PostgreSQL to transform the relational data model into a S
 
 ## Data Source
 The dataset used for this project is the DVD rental database, which provides information about movies, customers, rentals, stores, and payments etc. The data was provided by 'PostgreSQL Tutorial':
+
+
 [postgrestutrial](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/)
 
 I loaded this data into PostreSQL DataBase using Restore option
+
+
 ![restore1](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/4226c8e0-57f2-4f24-8fa0-bd6b3117097b)
+
+
 
 ![restore2](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/3fca1a29-3819-4e46-92ce-c996de42d721)
 
 ER Diagram of this dataset looks like this:
+
+
 ![er diagram](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/7702cdee-5fe3-43aa-a58f-d1a58f345562)
 
 -----------------------------------------------------------------------------------------
