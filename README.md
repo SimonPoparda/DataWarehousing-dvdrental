@@ -8,7 +8,7 @@ The project leverages PostgreSQL to transform the relational data model into a S
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#olympic-analysis-azure">About the project</a>
+      <a href="# Data Source">Data Source</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -20,21 +20,21 @@ The project leverages PostgreSQL to transform the relational data model into a S
       </ul>
     </li>
     <li>
-      <a href="#execution">Execution</a>
+      <a href="# Execution">Execution</a>
       <ul>
-        <li><a href="#storage-account-and-resource-group">Storage Account and Resource Group</a></li>
+        <li><a href="#Creating Tables">Creating Tables</a></li>
       </ul>
       <ul>
-        <li><a href="#data-factory">Data Factory</a></li>
+        <li><a href="#Inserting the Data">Inserting the Data</a></li>
       </ul>
       <ul>
-        <li><a href="#databricks">Data Factory</a></li>
+        <li><a href="#Analysis and time comparison">Analysis and time comparison</a></li>
       </ul>
       <ul>
         <li><a href="#synapse-analytics">Synapse Analytics</a></li>
       </ul>
     </li>
-      <a href="#summary">Summary</a>
+      <a href="#Summary">Summary</a>
     </li>
   </ol>
 
