@@ -4,7 +4,8 @@ This project focuses on transforming a relational data model into a Star Schema 
 
 The project leverages PostgreSQL to transform the relational data model into a Star Schema, a common approach in data warehousing for efficient analytics. The Star Schema consists of dimension tables (such as dimDate, dimCustomer, dimMovie, dimStore) and a fact table (factSales), organized around a central fact table for sales transactions.
 
-![download](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/426b2246-5ff3-4129-84bb-58a86d90aaf9)
+![postgresql 248x256](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/f78f268b-030a-416d-89a5-a1dd6aa6684c)
+
 
 <details>
   <summary>Table of Contents</summary>
