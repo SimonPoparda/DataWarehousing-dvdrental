@@ -1,8 +1,10 @@
-# DataWarehousing-dvdrental
+# DataWarehousing of DVD rental store
 
 This project focuses on transforming a relational data model into a Star Schema using the DVD rental dataset in PostgreSQL. The objective is to create a more optimized schema for analytics purposes.
 
 The project leverages PostgreSQL to transform the relational data model into a Star Schema, a common approach in data warehousing for efficient analytics. The Star Schema consists of dimension tables (such as dimDate, dimCustomer, dimMovie, dimStore) and a fact table (factSales), organized around a central fact table for sales transactions.
+
+![download](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/426b2246-5ff3-4129-84bb-58a86d90aaf9)
 
 <details>
   <summary>Table of Contents</summary>
@@ -30,7 +32,7 @@ The project leverages PostgreSQL to transform the relational data model into a S
 -----------------------------------------------------------------------------------------
 
 ## Data Source
-The dataset used for this project is the DVD rental database, which provides information about movies, customers, rentals, stores, and payments etc. The data was provided by 'PostgreSQL Tutorial':
+The dataset used for this project is the DVD rental database, which provides, among others, information about movies, customers, rentals, stores, and payments. The data was provided by 'PostgreSQL Tutorial':
 
 
 [postgrestutrial](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/)
@@ -53,7 +55,9 @@ ER Diagram of this dataset looks like this:
 
 ## Execution
 ### Creating Tables
-I wanted to tranform my data into a star schema according to the ER Diagram I created:
+I wanted to tranform my data into a star schema according to the ER Diagram I previously created:
+
+
 ![StarSchema](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/b7feb651-3d95-4b99-a7b8-9b9ba471eb27)
 
 I started by creating dimDate table 
@@ -299,7 +303,7 @@ GROUP BY (f.title, month, ci.city)
 ORDER BY f.title, month, ci.city, revenue desc;
 ```
 
-I might not seem a lot, but when managing more data it makes a huge difference
+It might not seem a lot, but when managing more data it makes a huge difference
 
 -----------------------------------------------------------------------------------------
 ## Summary
