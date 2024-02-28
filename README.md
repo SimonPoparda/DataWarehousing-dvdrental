@@ -1,6 +1,8 @@
 # DataWarehousing-dvdrental
 
-In this project I'm going to use Git, as well as Azure Cloud (Azure Data Factory, Data Lake Gen 2, Azure Synapse Analytics, Azure Databricks etc.) to build the data pipeline in order to Extract, Transform and Load (ETL) the data from 2021 Olympics in Tokyo.
+This project focuses on transforming a relational data model into a Star Schema using the DVD rental dataset in PostgreSQL. The objective is to create a more optimized schema for analytics purposes.
+
+The project leverages PostgreSQL to transform the relational data model into a Star Schema, a common approach in data warehousing for efficient analytics. The Star Schema consists of dimension tables (such as dimDate, dimCustomer, dimMovie, dimStore) and a fact table (factSales), organized around a central fact table for sales transactions.
 
 <details>
   <summary>Table of Contents</summary>
@@ -41,53 +43,24 @@ In this project I'm going to use Git, as well as Azure Cloud (Azure Data Factory
 
 -----------------------------------------------------------------------------------------
 
-## Built With
-1. Data Source - dvdrental dataset (from GitHub)
-
-2. Data Extraction - Git Bash
-
-3. Data Integration - Azure Data Factory
-
-4. Raw Data Store - Azure Data Lake Gen2
-
-5. Data Transformation - Azure DataBricks (PySpark)
-
-6. Transformed Data - Azure Data Lake Gen2
-
-7. Analytics - Azure Synapse Analytics
-
-![](images/icons1withoutpowerbi.png)
-
------------------------------------------------------------------------------------------
-
-## Scenario
-1. Extract Data using Git Bash
-   
-2. Copy raw data to Azure Storage (Data Lake Gen2) using Azure Data Factory
-   
-3. Perform data transformation using Databricks (PySpark)
-   
-4. Upload transofrmed data to Azure Storage (Data Lake Gen2)
-   
-5. Understand the data in Azure Synapse Analytics using SQL queries
-
-![](images/dashboard1_nopowerBI.png)
-
------------------------------------------------------------------------------------------
-
 ## Data Source
-The data for this project was provided by postgresqltutorial.com
+The dataset used for this project is the DVD rental database, which provides information about movies, customers, rentals, stores, and payments etc. The data was provided by 'PostgreSQL Tutorial':
 [postgrestutrial](https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/)
 
 I loaded this data into PostreSQL DataBase using Restore option
+![restore1](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/4226c8e0-57f2-4f24-8fa0-bd6b3117097b)
+
+![restore2](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/3fca1a29-3819-4e46-92ce-c996de42d721)
 
 ER Diagram of this dataset looks like this:
+![er diagram](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/7702cdee-5fe3-43aa-a58f-d1a58f345562)
 
 -----------------------------------------------------------------------------------------
 
 ## Execution
 ### Creating Tables
-I wanted to tranform my data into a star schema according to the ER Diagram I created
+I wanted to tranform my data into a star schema according to the ER Diagram I created:
+![StarSchema](https://github.com/SimonPoparda/DataWarehousing-dvdrental/assets/108056198/b7feb651-3d95-4b99-a7b8-9b9ba471eb27)
 
 I started by creating dimDate table 
 ```sql
@@ -295,7 +268,6 @@ ORDER BY revenue desc;
 ```
 
 
-
 relational model
 ```sql
 SELECT f.title, sum(p.amount) as total_amount
@@ -335,15 +307,9 @@ ORDER BY f.title, month, ci.city, revenue desc;
 
 I might not seem a lot, but when managing more data it makes a huge difference
 
-### Loading onto Snowflake
-
 -----------------------------------------------------------------------------------------
 ## Summary
-This project utilizes Git and Azure cloud services to construct a data pipeline for extracting, transforming, and loading data from the 2021 Olympics in Tokyo. The pipeline involves stages such as data extraction using Git Bash, data integration with Azure Data Factory, data transformation using Azure Databricks with PySpark, and data analytics using Azure Synapse Analytics.
-
-Throughout the project, actions were taken to address issues such as setting permissions, resolving errors, and ensuring secure access to sensitive data using Key Vault. SQL queries were used in Synapse Analytics to analyze the data, including counting athletes from each country, calculating total medals won by each country, and determining the average number of entries by gender for specific disciplines.
-
-The project was a great opportunity for me to learn about Git, various Azure Services, as well as infrustructure and ETL process itself.
+Transforming a relational data model into a Star Schema offers significant advantages for analytics and data warehousing purposes. By organizing data into dimension and fact tables, queries can be executed more efficiently, leading to faster insights and improved decision-making.
 
 ## Authors
 
