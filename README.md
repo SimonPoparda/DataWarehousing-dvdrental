@@ -1,4 +1,4 @@
-# DataWarehousing of DVD rental store
+# Data Warehousing of DVD rental store
 
 This project focuses on transforming a relational data model into a Star Schema using the DVD rental dataset in PostgreSQL. The objective is to create a more optimized schema for analytics purposes.
 
