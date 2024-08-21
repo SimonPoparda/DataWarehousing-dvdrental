@@ -255,7 +255,7 @@ JOIN inventory i ON (r.inventory_id = i.inventory_id);
 ```
 
 ### Analysis and time comparison
-I ran two queries on star schema to see if there's a difference in performace
+I ran two queries on star schema
 
 star schema
 ```sql
@@ -304,11 +304,11 @@ GROUP BY (f.title, month, ci.city)
 ORDER BY f.title, month, ci.city, revenue desc;
 ```
 
-It might not seem a lot, but when managing more data it makes a huge difference
+Star Schema Performs better due to less JOINS, which slow down analytical queries and add complexity
 
 -----------------------------------------------------------------------------------------
 ## Summary
-Transforming a relational data model into a Star Schema offers significant advantages for analytics and data warehousing purposes. By organizing data into dimension and fact tables, queries can be executed more efficiently, leading to faster insights and improved decision-making.
+This project focuses on transforming a relational data model into a Star Schema using a DVD rental dataset in PostgreSQL. The Star Schema, featuring dimension tables such as dimDate, dimCustomer, dimMovie, and dimStore, along with a central factSales table, is designed to optimize query performance and simplify data analysis. By structuring the data this way, the project aims to enhance analytical efficiency, enable faster insights, and support better decision-making for the DVD rental store.
 
 ## Authors
 
